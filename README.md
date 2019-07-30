@@ -1,1 +1,1 @@
-#mozila_tutorial
+#  Django Mozila Developer Tutorial
