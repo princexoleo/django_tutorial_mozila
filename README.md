@@ -1,1 +1,1 @@
-#  Django Mozila Developer Tutorial
+#  Django Tutorial By Mozila Developer
