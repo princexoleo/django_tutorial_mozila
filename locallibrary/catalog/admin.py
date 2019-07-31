@@ -9,11 +9,17 @@ class AuthorAdmin(admin.ModelAdmin):
 # Register the admin class with the associated model
 admin.site.register(Author,AuthorAdmin)
 
+class BookInstanceInline(admin.TabularInline):
+    model  = BookInstance
 
 # Decorate admin.site.register
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
     list_display = ('title', 'author', 'display_genre') #display_genre is custom function
+    inlines = [BookInstanceInline]
+
+
+
 
 
 # BookInstance and BookInstance Admin
@@ -37,10 +43,13 @@ class BookInstanceAdmin(admin.ModelAdmin):
     
 
 
+
+
+
 # # Register your models here.
 # admin.site.register(Book)
-
-
 admin.site.register(Genre)
 #admin.site.register(BookInstance)
 admin.site.register(Language)
+
+
