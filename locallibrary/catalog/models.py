@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 # Create your models here.
@@ -33,7 +34,7 @@ class Book(models.Model):
         """ String for representing the Model objects."""
         return self.title
     def get_absolute_url(self):
-        return reverse("bool-detail", kwargs={"pk": self.pk})
+        return reverse("book-detail", kwargs={"pk": self.pk})
     def display_genre(self):
         """ Craete a string for the Genre.This is required to display genre in BookAdmin """
         return ' , '.join(genre.name for genre in self.genre.all()[:3]) #(Western , Romantic)
