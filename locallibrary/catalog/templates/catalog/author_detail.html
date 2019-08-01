@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Name: {{ author.first_name }}</h1>
+
+  <p><strong>Author First Name:</strong> <a href=""> {{author.first_name }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Author Last Name:</strong> <a href=""> {{ author.last_name }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Date Of Birth:</strong>  {{ author.date_of_birth }}</p>
+  <p><strong>Died:</strong> {{ author.date_of_death }}</p> 
+  
+
+{% endblock %}
